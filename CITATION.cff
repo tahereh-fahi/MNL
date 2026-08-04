@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software in research, please cite the repository version used in your analysis."
+type: software
+title: "MNL: Gameplay Reward Analytics"
+abstract: >-
+  Computer-vision pipelines for extracting time-aligned reward events,
+  experience-gem pickups, kill counts, and weapon changes from gameplay video.
+authors:
+  - family-names: Fahi
+    given-names: Tahereh
+version: 0.1.0
+date-released: 2026-08-04
+keywords:
+  - computer vision
+  - gameplay analytics
+  - optical character recognition
+  - temporal event detection
+  - reward schedules

@@ -1,0 +1,10 @@
+easyocr
+ipython
+jupyterlab
+matplotlib
+nbformat
+numpy
+opencv-python
+pandas
+scikit-learn
+scipy

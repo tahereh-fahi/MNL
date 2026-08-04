@@ -1,0 +1,16 @@
+{
+  "source": "https://vampire.survivors.wiki/w/Experience_Gem",
+  "colors": {
+    "blue": [
+      "wiki/blue_standard.png",
+      "wiki/blue_dark.png",
+      "wiki/blue_bright.png"
+    ],
+    "green": [
+      "wiki/green_standard.png"
+    ],
+    "red": [
+      "wiki/red_standard.png"
+    ]
+  }
+}

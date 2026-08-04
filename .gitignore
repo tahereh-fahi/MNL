@@ -1,0 +1,58 @@
+# Private or non-public source material
+/00-CV/
+/00-Human Coded Sheet/
+/00-MNL meetings/
+/00-Videos/
+/02_blue_gems/data/raw/
+
+# Internal workspace instructions
+/ACADEMIC_REPORT_RULES.md
+**/AGENTS.md
+**/PROJECT_RULES.md
+
+# Historical and generated material
+**/archive*/
+**/results/
+**/output/
+**/outputs/
+**/debug_frames/
+
+# Keep one compact copy of each model figure
+/02_blue_gems/XP and Trajectory Gem Classification Model/model_outputs/*.jpg
+
+# Large media and model artifacts
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.pt
+*.pth
+*.onnx
+*.h5
+*.joblib
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Editor and operating-system clutter
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+~$*
+*.tmp

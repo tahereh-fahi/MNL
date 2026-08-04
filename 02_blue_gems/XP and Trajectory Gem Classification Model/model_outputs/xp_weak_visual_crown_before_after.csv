@@ -1,0 +1,6 @@
+Metric,Before Crown correction,Crown-aware model,Change
+Correct predictions,1212.0,1215.0,3.0
+Errors,42.0,39.0,-3.0
+Overall accuracy,0.9665071770334929,0.9688995215311005,0.0023923444976076125
+Blue predicted as green,27.0,26.0,-1.0
+Green predicted as blue,13.0,11.0,-2.0

@@ -1,0 +1,3 @@
+Estimate,Intervals,Exact-count accuracy,Within-one accuracy,MAE,RMSE,Bias,Human total,Predicted total,Total error
+Exact assignments only,60,0.2,0.4666666666666667,2.966666666666667,4.516635916254486,-0.9666666666666667,704,646,-58
+Including likely colors,60,0.2,0.4666666666666667,2.95,4.492586485904677,-0.95,704,647,-57

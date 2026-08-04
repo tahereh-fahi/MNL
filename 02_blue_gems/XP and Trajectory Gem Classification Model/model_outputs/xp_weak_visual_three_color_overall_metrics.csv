@@ -1,0 +1,10 @@
+Metric,Value
+Macro MAE,1.1222222222222222
+Macro RMSE,1.8260115897853109
+Weighted MAE per human gem,0.26861702127659576
+Pooled RMSE across 180 color-interval cells,2.64154836748786
+Mean interval color-composition error,0.33658758746364176
+Median interval color-composition error,0.25
+Human total gems,752.0
+Predicted total gems,682.0
+Total gem-count error,-70.0
