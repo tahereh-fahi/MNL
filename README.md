@@ -13,7 +13,7 @@
 
 ## Overview
 
-MNL is a research-oriented toolkit for extracting reward-related events from *Vampire Survivors* gameplay. The project combines optical character recognition, template matching, temporal tracking, and interpretable classification to convert video into analysis-ready tables.
+MNL is a research-oriented toolkit for extracting reward-related events from *Vampire Survivors* gameplay. The project combines optical character recognition, template matching, temporal tracking, interpretable classification, and interval-coded reward-trajectory modeling to convert video into analysis-ready tables.
 
 The repository is intentionally curated: it contains active methods, explanatory notebooks, reusable scripts, selected validation summaries, and compact reference files. Source recordings, human-coded workbooks, internal lab material, and bulk-generated outputs are not distributed.
 
@@ -24,6 +24,7 @@ The repository is intentionally curated: it contains active methods, explanatory
 | [Kill counter and timestamp](<01_kill_counter_and_time_stamp/>) | Recover run time and cumulative enemy kills | HUD localization, image preprocessing, OCR, and temporal consistency checks | Time-aligned CSVs and RMSE evaluation |
 | [XP and trajectory gem classification](<02_blue_gems/>) | Detect collected experience gems and estimate color | XP-bar change detection, player anchoring, multi-frame trajectories, template evidence, and a weak-visual classifier | Event, per-second, five-second, and validation tables |
 | [Weapon screen recorder](<03_weapons/>) | Track the six weapon slots in the top-left HUD | Template matching, confidence margins, and temporal stabilization | Weapon timeline, acquisition/change events, and review flags |
+| [Reward trajectory 01](<04_reward_trajectory_01/>) | Model interval-coded reward trajectories with Hawkes processes | Event-level temporal point-process modeling, self-excitation analysis, and burstiness checks | Thesis companion notebook and write-up |
 
 ## Selected result
 
@@ -40,6 +41,7 @@ MNL/
 ├── 01_kill_counter_and_time_stamp/   # OCR-based HUD extraction and evaluation
 ├── 02_blue_gems/                     # XP-event and collected-gem modeling
 ├── 03_weapons/                       # Weapon-slot detection and stabilization
+├── 04_reward_trajectory_01/          # Hawkes-process reward-trajectory thesis materials
 ├── CITATION.cff                      # Citation metadata
 ├── requirements.txt                  # Core Python dependencies
 └── README.md                         # Project overview
@@ -70,6 +72,7 @@ Start with one of these notebooks:
 - [Kill-counter RMSE evaluation](<01_kill_counter_and_time_stamp/notebooks/rmse_kill_counter_accuracy.ipynb>)
 - [XP and trajectory gem classifier](<02_blue_gems/XP and Trajectory Gem Classification Model/xp_trajectory_gem_classification.ipynb>)
 - [Weapon screen recorder](<03_weapons/notebooks/weapon_screen_recorder_explained.ipynb>)
+- [Reward trajectory Hawkes analysis](<04_reward_trajectory_01/CRAVE_HawkesProcess_Analysis.ipynb>)
 
 ### 3. Supply a local recording
 
