@@ -1,0 +1,87 @@
+{
+  "config_version": "1.0.0",
+  "prepared_by": "Tahereh Fahi",
+  "dataset": {
+    "video_asset_id": "vid_video4_imelda_100_001",
+    "session_id": "ses_video4_imelda_100_001",
+    "segment_id": "seg_video4_imelda_100_001",
+    "duration_ms": 1196757,
+    "fps": 30,
+    "media_to_session_mapping": "one_to_one",
+    "video": {
+      "path": "00-Videos/video4_Imelda_100.mp4",
+      "sha256": "5897c250306e3793198185802935f8beda2f1779228999d22384ad8b7a16965b"
+    }
+  },
+  "sources": {
+    "release_manifest": {
+      "path": "06-Pipeline/results/video4_candidate_releases/release_video4_candidates_e946b55589569f12cdd0/release_manifest.json",
+      "sha256": "666ee9c72bbf52ba687762066d29849664ad17751d8b8b6a487895a9f5535d64"
+    },
+    "canonical_observations": {
+      "path": "06-Pipeline/results/video4_candidate_releases/release_video4_candidates_e946b55589569f12cdd0/canonical/observations.jsonl",
+      "sha256": "d684ff75a5a2b28eeba49ccdc2380203d869042de010a997302b0c791e4d0f4b"
+    },
+    "trajectory_5s": {
+      "path": "06-Pipeline/results/video4_candidate_releases/release_video4_candidates_e946b55589569f12cdd0/canonical/reward_trajectory_5s.csv",
+      "sha256": "46d266208f885042effa4e60e08bfa59165ed1685ad39fd8d7f22e9a0395967f"
+    },
+    "inventory_events": {
+      "path": "03_weapons/results/video4_imelda_100/inventory_events_fixed_full/inventory_events.csv",
+      "sha256": "ac13ebfec15a4cb18c5d5c5c8059f03fcc4f8a2d0cead6e89323e7d7eced12e5"
+    },
+    "retrospective_outcomes": {
+      "path": "07-Dashboard/public/data/retrospective-inventory-evidence.json",
+      "sha256": "a1a296fa48bf572fb7fd66638b619e1d44fe5389b3cdf88b9b9ae442544b13d1"
+    }
+  },
+  "detectors": {
+    "hud_clock": {
+      "script": "framework:detectors/hud.py",
+      "template_paths": [
+        "framework:assets/hud/skull_icon.jpg",
+        "framework:assets/hud/skull_anchor.jpg"
+      ],
+      "sample_offsets_seconds": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "min_ocr_confidence": 0,
+      "min_timer_observed_rate": 0.5,
+      "min_kill_observed_rate": 0.4,
+      "initial_kill_state": 0,
+      "evidence_every_seconds": 60,
+      "max_evidence_frames": 250,
+      "clock_qc": {
+        "max_game_clock_rate": 2.1,
+        "jump_review_threshold_seconds": 3,
+        "imputation_policy": "none"
+      }
+    },
+    "inventory": {
+      "script": "framework:detectors/inventory.py",
+      "xp_events": "02_gems/results/video4_Imelda_100/collected_gems_cv_final/collected_gems_video4_imelda_100_xp_ab_events.csv",
+      "weapon_icon_dir": "framework:assets/weapon_icons",
+      "passive_icon_dir": "framework:assets/passive_icons",
+      "weapon_manifest": "framework:assets/manifests/wiki_weapon_manifest.csv",
+      "passive_manifest": "framework:assets/manifests/wiki_passive_item_manifest.csv",
+      "weapon_timeline": "03_weapons/results/video4_imelda_100/hud_weapon_scan_5s/weapon_timeline.csv",
+      "video_key": "video_4",
+      "sample_fps": 10
+    },
+    "gem_xp": {
+      "script": "framework:detectors/gems.py",
+      "template_dir": "framework:assets/gems",
+      "template_profile": "legacy",
+      "initial_level": 1,
+      "inventory_events": "03_weapons/results/video4_imelda_100/inventory_events_fixed_full/inventory_events.csv"
+    }
+  },
+  "policies": {
+    "use_human_coded_ground_truth": false,
+    "blank_means_zero": false,
+    "publish_review_flagged_events": true,
+    "five_second_interval_semantics": "half_open_[start,end)"
+  }
+}

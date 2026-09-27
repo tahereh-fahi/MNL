@@ -1,0 +1,18 @@
+# Prepared by Tahereh Fahi.
+# Candidate runtime pins derived from the development environment.
+# This is NOT a fully resolved lock; clean installation must capture and verify
+# transitive versions before declaring a platform reproducible.
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+opencv-python-headless==5.0.0.93
+easyocr==1.7.2
+torch==2.8.0
+torchvision==0.23.0
+Pillow==11.3.0
+scikit-image==0.24.0
+python-bidi==0.6.11
+PyYAML==6.0.3
+Shapely==2.0.7
+pyclipper==1.3.0.post6
+ninja==1.13.0

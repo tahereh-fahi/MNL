@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vss-framework"
+version = "0.18.0"
+description = "Evidence-based Vampire Survivors event reconstruction framework"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Tahereh Fahi" }]
+dependencies = []
+
+[project.optional-dependencies]
+video = ["opencv-python-headless>=4.8", "numpy>=1.23", "pandas>=1.5", "scipy>=1.9"]
+ocr = ["opencv-python-headless>=4.8", "numpy>=1.23", "pandas>=1.5", "scipy>=1.9", "easyocr>=1.7"]
+
+[project.scripts]
+vss-framework = "vss_framework.cli:main"
+vss-ops = "vss_framework.deployment:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vss_framework = ["assets/**/*", "assets/*.json"]

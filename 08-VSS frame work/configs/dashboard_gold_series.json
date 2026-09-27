@@ -1,0 +1,33 @@
+{
+  "prepared_by": "Tahereh Fahi",
+  "datasets": {
+    "video1": [{"runName": "video1_telemetry_gold_fixed_v1", "offsetMs": 0}],
+    "video2f": [{"runName": "video2_sigma_full_telemetry_gold_gameplay_v1", "offsetMs": 0}],
+    "video3": [
+      {"runName": "video3_run01_telemetry_gold_fixed_v1", "offsetMs": 9000},
+      {"runName": "video3_run02_telemetry_gold_fixed_v1", "offsetMs": 191000}
+    ],
+    "video4": [
+      {"runName": "video4_telemetry_gold_recalc_v5", "offsetMs": 0, "endMs": 970000},
+      {"runName": "video4_telemetry_gold_fever_monotonic_v1", "offsetMs": 0, "startMs": 970000, "endMs": 1040000},
+      {"runName": "video4_telemetry_gold_recalc_v5", "offsetMs": 0, "startMs": 1040000}
+    ],
+    "video5": [
+      {"runName": "video5_part1_telemetry_gold_fixed_v1", "offsetMs": 0},
+      {"runName": "video5_part2_telemetry_gold_recalc_v3", "offsetMs": 632000}
+    ],
+    "video5zero": [
+      {"runName": "video5_imelda_0_part1_telemetry_v1", "offsetMs": 0},
+      {"runName": "video5_imelda_0_part2_telemetry_recalc_v3", "offsetMs": 622700}
+    ],
+    "video7g": [{"runName": "video7_g150c_telemetry_gold_fixed_v1", "offsetMs": 0}],
+    "video7l": [{"runName": "video7_l100hb_telemetry_gold_fixed_v1", "offsetMs": 0}],
+    "imeldahh": [{"runName": "imelda_hurry_highluck_telemetry_gold_fixed_v1", "offsetMs": 0}],
+    "imeldall": [{"runName": "imelda_lowluck50_telemetry_gold_fixed_v1", "offsetMs": 0}],
+    "flameguyll": [{"runName": "flameguy_lowluck50_madforest_hurry_telemetry_recalc_v3", "offsetMs": 0}],
+    "imeldapu10": [{"runName": "imelda_powerup_highluck10_telemetry_v1", "offsetMs": 0}],
+    "imeldapuh": [{"runName": "imelda_powerups_highluck_telemetry_recalc_v2", "offsetMs": 0}],
+    "sigmabro": [{"runName": "sigma_bossrash_powerups_only_telemetry_recalc_v3", "offsetMs": 0}],
+    "sigmabrh": [{"runName": "sigma_bossrash_powerups_highluck_telemetry_recalc_v3", "offsetMs": 0}]
+  }
+}

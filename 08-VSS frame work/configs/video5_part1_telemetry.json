@@ -1,0 +1,31 @@
+{
+  "config_version": "1.0.0",
+  "prepared_by": "Tahereh Fahi",
+  "dataset": {
+    "video_asset_id": "vid_video5_imelda_1000_part1_001",
+    "session_id": "ses_video5_imelda_1000_001",
+    "segment_id": "seg_video5_part1_001",
+    "duration_ms": 320533,
+    "fps": 30,
+    "media_to_session_mapping": "part1_local_zero",
+    "video": {
+      "path": "00-Videos/video5_Imelda_1000_part1.mp4",
+      "sha256": "f3bb3e95a8e5a5e387531b11919c616b7de9cd3802114c6ed670763f28780de3"
+    }
+  },
+  "detectors": {
+    "gem_xp": {
+      "script": "framework:detectors/gems.py",
+      "initial_level": 1,
+      "initial_level_evidence": {
+        "source": "video_hud_ocr",
+        "video_seconds": [8, 10, 12],
+        "observed_levels": [1, 1, 1]
+      }
+    }
+  },
+  "policies": {
+    "use_human_coded_ground_truth": false,
+    "blank_means_zero": false
+  }
+}

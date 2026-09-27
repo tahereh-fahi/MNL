@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+.cache/
+/runs/
+/inputs/
+/assets/
+/src/vss_framework/assets/
+/tests/fixtures/
+
+# The public personal repository contains source code, not internal handoff
+# notes or the IT delivery package. Bundled artwork needs separate rights review.
+/*.md
+!/README.md
+/delivery/*
+!/delivery/requirements-cpu.txt
+!/delivery/requirements-macos-arm64-py39.txt
+!/delivery/THIRD_PARTY_NOTICES.md

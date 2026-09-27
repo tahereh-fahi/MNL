@@ -1,0 +1,67 @@
+{
+  "config_version": "1.0.0",
+  "prepared_by": "Tahereh Fahi",
+  "dataset": {
+    "video_asset_id": "vid_video7_l100hb_001",
+    "session_id": "ses_video7_l100hb_001",
+    "segment_id": "seg_video7_l100hb_001",
+    "duration_ms": 452864,
+    "fps": 30,
+    "media_to_session_mapping": "one_to_one",
+    "video": {
+      "path": "00-Videos/video7_L100HB.mp4",
+      "sha256": "5cfdd20591bfb9fee4c6cbf412449656fac6b28d97aca6ffb82b09b25fdaeb0b"
+    }
+  },
+  "sources": {},
+  "detectors": {
+    "hud_clock": {
+      "script": "framework:detectors/hud.py",
+      "template_paths": [
+        "framework:assets/hud/skull_icon.jpg",
+        "framework:assets/hud/skull_anchor.jpg"
+      ],
+      "sample_offsets_seconds": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "min_ocr_confidence": 0,
+      "min_timer_observed_rate": 0.5,
+      "min_kill_observed_rate": 0.4,
+      "initial_kill_state": 0,
+      "evidence_every_seconds": 60,
+      "max_evidence_frames": 250,
+      "clock_qc": {
+        "max_game_clock_rate": 2.1,
+        "jump_review_threshold_seconds": 3,
+        "imputation_policy": "none"
+      }
+    },
+    "inventory": {
+      "script": "framework:detectors/inventory.py",
+      "xp_events": "08-VSS frame work/runs/video7_l100hb_gem_initial_v4/worker/collected_gems_video7_l100hb_xp_ab_events.csv",
+      "weapon_icon_dir": "framework:assets/weapon_icons",
+      "passive_icon_dir": "framework:assets/passive_icons",
+      "weapon_manifest": "framework:assets/manifests/wiki_weapon_manifest.csv",
+      "passive_manifest": "framework:assets/manifests/wiki_passive_item_manifest.csv",
+      "weapon_timeline": "08-VSS frame work/inputs/video7_l100hb/weapon_timeline.csv",
+      "video_key": "video_7_g150c",
+      "sample_fps": 10,
+      "start_second": 0
+    },
+    "gem_xp": {
+      "script": "framework:detectors/gems.py",
+      "template_dir": "framework:assets/gems",
+      "template_profile": "legacy",
+      "initial_level": 1,
+      "inventory_events": "08-VSS frame work/runs/video7_l100hb_inventory_v2/worker/inventory_events.csv"
+    }
+  },
+  "policies": {
+    "use_human_coded_ground_truth": false,
+    "blank_means_zero": false,
+    "publish_review_flagged_events": true,
+    "five_second_interval_semantics": "half_open_[start,end)"
+  }
+}

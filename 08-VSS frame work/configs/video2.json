@@ -1,0 +1,67 @@
+{
+  "config_version": "1.0.0",
+  "prepared_by": "Tahereh Fahi",
+  "dataset": {
+    "video_asset_id": "vid_video2_sigma_001",
+    "session_id": "ses_video2_sigma_001",
+    "segment_id": "seg_video2_sigma_001",
+    "duration_ms": 738232,
+    "fps": 30,
+    "media_to_session_mapping": "one_to_one",
+    "video": {
+      "path": "00-Videos/Video2_Sigma.mp4",
+      "sha256": "7064090859267a5bbf66955cc2b7671ae17177a68dd9692a2ca325f59d8c33e7"
+    }
+  },
+  "sources": {},
+  "detectors": {
+    "hud_clock": {
+      "script": "framework:detectors/hud.py",
+      "template_paths": [
+        "framework:assets/hud/skull_icon.jpg",
+        "framework:assets/hud/skull_anchor.jpg"
+      ],
+      "sample_offsets_seconds": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "min_ocr_confidence": 0,
+      "min_timer_observed_rate": 0.5,
+      "min_kill_observed_rate": 0.4,
+      "initial_kill_state": 0,
+      "evidence_every_seconds": 60,
+      "max_evidence_frames": 250,
+      "clock_qc": {
+        "max_game_clock_rate": 2.1,
+        "jump_review_threshold_seconds": 3,
+        "imputation_policy": "none"
+      }
+    },
+    "inventory": {
+      "script": "framework:detectors/inventory.py",
+      "xp_events": "08-VSS frame work/runs/video2_gem_xp_initial_v1/worker/collected_gems_video2_sigma_xp_ab_events.csv",
+      "weapon_icon_dir": "framework:assets/weapon_icons",
+      "passive_icon_dir": "framework:assets/passive_icons",
+      "weapon_manifest": "framework:assets/manifests/wiki_weapon_manifest.csv",
+      "passive_manifest": "framework:assets/manifests/wiki_passive_item_manifest.csv",
+      "weapon_timeline": "08-VSS frame work/inputs/video2/weapon_timeline.csv",
+      "video_key": "video_2",
+      "sample_fps": 10,
+      "start_second": 0
+    },
+    "gem_xp": {
+      "script": "framework:detectors/gems.py",
+      "template_dir": "framework:assets/gems",
+      "template_profile": "legacy",
+      "initial_level": 5,
+      "inventory_events": "08-VSS frame work/runs/video2_inventory_v1/worker/inventory_events.csv"
+    }
+  },
+  "policies": {
+    "use_human_coded_ground_truth": false,
+    "blank_means_zero": false,
+    "publish_review_flagged_events": true,
+    "five_second_interval_semantics": "half_open_[start,end)"
+  }
+}
